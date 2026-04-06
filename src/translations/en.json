@@ -1,0 +1,250 @@
+{
+  "welcome": "Welcome to AdvanceAI Education Tool",
+  "welcome_description": "Explore various AI models...",
+  "get_started": "Get Started",
+  "explore": "Explore",
+  "models": "models",
+
+  "ai_models": "AI Models",
+  "categories": "Categories",
+  "interactive": "Interactive",
+  "easy_to_learn": "Easy to Learn",
+
+  "model_categories": "Model Categories",
+
+  "vision_models": "Vision Models",
+  "vision_description": "Explore computer vision models...",
+
+  "speech_models": "Speech Models",
+  "speech_description": "Learn about audio processing...",
+
+  "text_models": "Text Models",
+  "text_description": "Discover text processing...",
+
+  "about": "About AdvanceAI",
+  "about_description": "AdvanceAI is an educational tool...",
+
+  "vision_models": "Vision Models",
+  "vision_main_description": "Computer Vision models analyze and understand visual data...",
+
+  "hand_gesture": "Hand Gesture Detection",
+  "hand_gesture_desc": "Detect and classify hand gestures...",
+
+  "object_classification": "Object Classification",
+  "object_classification_desc": "Identify and categorize objects...",
+
+  "facial_emotion": "Facial Emotion Detection",
+  "facial_emotion_desc": "Recognize human emotions...",
+
+  "digit_classification": "Digit Classification",
+  "digit_classification_desc": "Classify handwritten digits...",
+
+  "launch_facial_emotion": "Launch Facial Emotion Detection",
+  "launching_emotion": "Launching Facial Emotion Detection Interface...",
+
+   "digit_full_desc": "Digit Classification uses a CNN-based model...",
+  "hand_gesture_full_desc": "Hand Gesture Detection predicts...",
+  "object_full_desc": "Object Classification uses YOLOv8...",
+
+  "digit_feature_1": "CNN-Based: Uses Convolutional Neural Networks...",
+  "digit_feature_2": "Lightweight: Designed to run efficiently...",
+  "digit_feature_3": "Grayscale Input...",
+  "digit_feature_4": "Two Convolutional Layers",
+
+  "error_launch": "Failed to launch interface",
+
+
+  "voice_command_desc": "Control 3D objects using voice commands...",
+  "voice_command_full_desc": "3D Voice Command allows you to control...",
+  "speaker_identification": "Speaker Identification",
+  "speaker_identification_desc": "Identify and distinguish speakers...",
+  "launch_voice_command": "Launch 3D Voice Command Interface",
+  "launching_voice_command": "Launching 3D Voice Command...",
+  "voice_feature_1": "🎮 Interactive 3D Model Control",
+  "voice_feature_2": "🎤 Voice Command Recognition",
+  "voice_feature_3": "📊 Real-time Audio Visualization",
+  "voice_feature_4": "🎯 Multiple Control Methods",
+  "voice_feature_5": "🎨 Modern UI with Theme Support",
+  "speech_recognition_desc": "Speech recognition converts spoken language into text using neural networks.",
+  "emotion_detection_desc": "Emotion detection in speech analyzes voice patterns to identify emotions.",
+  "language_identification_desc": "Language identification detects the language from audio samples.",
+
+  "voice_preview_title": "3D Voice Command Interface",
+
+  "dep_panda3d": "• Panda3D - 3D Graphics Engine",
+  "dep_sounddevice": "• sounddevice - Audio Recording",
+  "dep_librosa": "• librosa - Audio Processing",
+  "dep_tensorflow": "• tensorflow - Machine Learning",
+  "dep_numpy": "• numpy - Numerical Computing",
+
+  "app_name": "AdvanceAI",
+  "dashboard": "Dashboard",
+  "model_categories": "Model Categories",
+  "vision_models": "Vision Models",
+  "speech_models": "Speech Models",
+  "text_models": "Text Models",
+  "toggle_theme": "Toggle Theme",
+  "app_subtitle": "AI Education Tool",
+  "search_placeholder": "Search models...",
+  "gesture_title": "Gesture Recognition GUI",
+  "language_detection_title": "Language Detection System",
+  "object_trainer_title": "Object Classification Trainer",
+  "sms_spam_title": "SMS Spam Classification",
+  "speaker_identification_title": "Speaker Identification",
+  "voice_command_3d": "3D Voice Command",
+  
+  "model_controls": "Model Controls",
+  "transform": "Transform",
+  "voice_control": "Voice Control",
+  "sample_number": "Sample #",
+  "left": "left",
+  "right": "right",
+  "up": "up",
+  "down": "down",
+  "rotate": "rotate",
+  "status_ready": "Status: Ready",
+  "dataset_statistics": "Dataset Statistics",
+  "stop_listening": "Stop Listening",
+  "debug_output": "Debug Output",
+  "audio_level": "Audio Level",
+  "progress": "Progress",
+  
+  "text": "TEXT",
+
+  "try_model": "Try Model",
+  "learn_more": "Learn More",
+
+  "text_models": "Text Models",
+  "text_models_description": "Text models process and analyze written language for tasks like classification and prediction.",
+
+  "sentiment_analysis": "Sentiment Analysis",
+  "sentiment_desc": "Analyze text sentiment (positive, negative, neutral)",
+
+  "ngram_model": "N-gram Language Model",
+  "ngram_desc": "Predict the next word using probabilistic models",
+
+  "language_classification": "Language Classification",
+  "language_classification_desc": "Identify the language of text",
+
+  "empty_input": "Please enter text",
+
+  "sentiment": "Sentiment",
+  "positive": "Positive",
+  "negative": "Negative",
+  "neutral": "Neutral",
+
+  "error": "Error",
+
+  "model_controls": "Model Controls",
+  "transform": "Transform",
+  "voice_control": "Voice Control",
+  "sample_number": "Sample #",
+  "left": "left",
+  "right": "right",
+  "up": "up",
+  "down": "down",
+  "rotate": "rotate",
+  "status_ready": "Status: Ready",
+  "dataset_statistics": "Dataset Statistics",
+  "stop_listening": "Stop Listening",
+  "debug_output": "Debug Output",
+  "audio_level": "Audio Level",
+  "progress": "Progress",
+  "voice_command_3d": "Voice Command 3D",
+
+  "speech_models": "Speech Models",
+  "speech_main_description": "Explore various speech-based AI models",
+
+  "speaker_identification": "Speaker Identification",
+  "speaker_identification_desc": "Identify a person based on their voice",
+
+  "voice_command_desc": "Control a 3D model using voice commands",
+  "voice_command_full_desc": "Interactively control a 3D model using voice commands",
+
+  "voice_feature_1": "Real-time voice control",
+  "voice_feature_2": "Multi-command support",
+  "voice_feature_3": "3D model interaction",
+  "voice_feature_4": "Training and testing modes",
+  "voice_feature_5": "Live audio visualization",
+
+  "launch_voice_command": "Launch Voice Command",
+
+  "dependencies": "Dependencies",
+  "dep_panda3d": "Panda3D (for 3D rendering)",
+  "dep_sounddevice": "SoundDevice (for audio recording)",
+  "dep_librosa": "Librosa (for audio processing)",
+  "dep_tensorflow": "TensorFlow (for model training)",
+  "dep_numpy": "NumPy (for data processing)",
+
+  "launching_voice_command": "Launching Voice Command...",
+  "error_launch": "Error launching application",
+
+  "speaker_full_desc": "Model that identifies a person using voice",
+  "speaker_feature_1": "Voice-based identification",
+  "speaker_feature_2": "High accuracy",
+  "speaker_feature_3": "Real-time processing",
+
+  "launch_speaker": "Launch Speaker Identification",
+  "launching_speaker": "Launching Speaker Identification...",
+
+  "speech_recognition": "Speech Recognition",
+  "speech_recognition_desc": "Convert speech to text",
+
+  "emotion_detection": "Emotion Detection",
+  "emotion_detection_desc": "Detect emotions from voice",
+
+  "language_identification": "Language Identification",
+  "language_identification_desc": "Identify spoken language",
+
+  "hand_gesture_full_desc": "Control the model using hand gestures",
+  "hand_gesture_feature_1": "Real-time hand gesture recognition",
+  "hand_gesture_feature_2": "Multi-gesture support",
+  "hand_gesture_feature_3": "Camera-based tracking",
+  "hand_gesture_feature_4": "User-friendly interface",
+  "launch_hand_gesture": "Launch Hand Gesture",
+
+  "object_full_desc": "Detect and classify objects in images and videos",
+  "object_feature_1": "Real-time object detection",
+  "object_feature_2": "Multiple object recognition",
+  "object_feature_3": "High accuracy model",
+  "object_feature_4": "Supports image and video input",
+  "launch_object": "Launch Object Detection",
+
+  "feature_emotion_1": "Emotion detection from voice",
+  "feature_emotion_2": "Real-time emotion analysis",
+
+  "digit_full_desc": "Recognize handwritten digits",
+  "digit_feature_1": "Handwritten digit recognition",
+  "digit_feature_2": "Image-based input",
+  "digit_feature_3": "High accuracy classification",
+  "digit_feature_4": "Fast results",
+  "launch_digit": "Launch Digit Recognition",
+   "utilities": "Utilities",
+  "settings": "Settings",
+  "additional": "Additional",
+  "help": "Help",
+  "get_started": "Get Started",
+  "feedback": "Feedback",
+
+  "gesture_title": "Hand Gesture Detection",
+  "main_webcam_view": "Main Webcam View",
+  "start_detection": "Start Detection",
+  "stop_detection": "Stop Detection",
+  "top_webcam_view": "Top Webcam View",
+  "open": "Open",
+  "start_recording": "Start Recording",
+  "close": "Close",
+  "idle": "Idle",
+  "webcam_closed": "Webcam Closed",
+  "recording": "Recording",
+  "gesture": "Gesture",
+  "next_gesture": "Next Gesture",
+  "number_of_frames": "Number of Frames",
+  "train_model": "Train Model",
+  "n_estimators": "n_estimators",
+  "max_depth": "max_depth"
+
+
+ 
+
+}
