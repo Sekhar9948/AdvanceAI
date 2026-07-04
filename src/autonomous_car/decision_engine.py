@@ -6,9 +6,9 @@ Brain of the AI Autonomous Car
 
 import time
 
-from motor_controller import MotorController
-from ultrasonic import UltrasonicSensor
-from yolo_detector import YOLODetector
+from .motor_controller import MotorController
+from .ultrasonic import UltrasonicSensor
+from .yolo_detector import YOLODetector
 
 
 class DecisionEngine:

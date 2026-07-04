@@ -20,6 +20,7 @@ from src.screens.dashboard import Dashboard
 from src.screens.vision_models import VisionModelsScreen
 from src.screens.speech_models import SpeechModelsScreen
 from src.screens.text_models import TextModelsScreen
+from src.screens.autonomous_car import AutonomousCarScreen
 from src.utils.responsive_utils import get_screen_metrics
 from src.translator import Translator
 
@@ -126,6 +127,13 @@ class EdvanceApp:
         
         self.screens["text_models"] = TextModelsScreen(
             self.content_frame, 
+            self.theme_manager,
+            self.translator
+        )
+
+        # Create Autonomous Car Screen
+        self.screens["autonomous_car"] = AutonomousCarScreen(
+            self.content_frame,
             self.theme_manager,
             self.translator
         )

@@ -1,13 +1,13 @@
 """
-car_commands.py
+command_handler.py
 
 Handles all commands for the Autonomous Car.
 """
 
-from decision_engine import DecisionEngine
+from .decision_engine import DecisionEngine
 
 
-class CarCommands:
+class CommandHandler:
 
     def __init__(self):
 
@@ -64,7 +64,7 @@ class CarCommands:
 
 if __name__ == "__main__":
 
-    commands = CarCommands()
+    commands = CommandHandler()
 
     while True:
 

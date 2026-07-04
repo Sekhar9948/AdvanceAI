@@ -98,6 +98,8 @@ class Sidebar(ctk.CTkFrame):
             {"name": "speech_models", "text": self.translator.t("speech_models")},
             {"name": "text_models", "text": self.translator.t("text_models")},
             {"name": "section_title_2", "text": self.translator.t("utilities"), "type": "section"},
+            {"name": "section_title_2", "text": "Robotics", "type": "section"},
+            {"name": "autonomous_car", "text": "🚗 Autonomous Car"},
             {"name": "settings", "text": self.translator.t("settings")},
             {"name": "section_title_3", "text": self.translator.t("additional"), "type": "section"},
             {"name": "help", "text": self.translator.t("help")},
