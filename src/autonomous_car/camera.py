@@ -1,14 +1,28 @@
 """
 camera.py
 
-Windows Development Version
-Uses laptop webcam for image capture.
-Later replace with Raspberry Pi Camera.
+Cross Platform Camera Module
+
+Supports:
+1. Windows Laptop Webcam
+2. Raspberry Pi Camera Module (Picamera2)
+
+Automatically detects the platform.
 """
 
 import cv2
 import os
+import platform
 from datetime import datetime
+
+IS_RASPBERRY_PI = (
+    platform.system() == "Linux"
+    and ("arm" in platform.machine().lower()
+         or "aarch64" in platform.machine().lower())
+)
+
+if IS_RASPBERRY_PI:
+    from picamera2 import Picamera2
 
 
 class Camera:
@@ -16,33 +30,70 @@ class Camera:
     def __init__(self):
 
         self.camera = None
+        self.picam2 = None
 
         self.width = 640
         self.height = 480
 
         self.image_folder = "captured_images"
-
         os.makedirs(self.image_folder, exist_ok=True)
 
     def start(self):
 
-        self.camera = cv2.VideoCapture(0)
+        if IS_RASPBERRY_PI:
 
-        self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
-        self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
+            self.picam2 = Picamera2()
 
-        if not self.camera.isOpened():
-            raise Exception("Cannot open webcam")
+            config = self.picam2.create_preview_configuration(
+                main={
+                    "size": (self.width, self.height)
+                }
+            )
 
-        print("=================================")
-        print(" Camera Started Successfully")
-        print("=================================")
+            self.picam2.configure(config)
+
+            self.picam2.start()
+
+            print("=================================")
+            print(" Raspberry Pi Camera Started")
+            print("=================================")
+
+        else:
+
+            self.camera = cv2.VideoCapture(0)
+
+            self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
+            self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
+
+            if not self.camera.isOpened():
+                raise Exception("Cannot open webcam")
+
+            print("=================================")
+            print(" Laptop Camera Started")
+            print("=================================")
+
+    def read_frame(self):
+
+        if IS_RASPBERRY_PI:
+
+            frame = self.picam2.capture_array()
+
+            frame = cv2.cvtColor(
+                frame,
+                cv2.COLOR_RGB2BGR
+            )
+
+            return True, frame
+
+        else:
+
+            return self.camera.read()
 
     def show_live(self):
 
         while True:
 
-            ret, frame = self.camera.read()
+            ret, frame = self.read_frame()
 
             if not ret:
                 break
@@ -51,12 +102,10 @@ class Camera:
 
             key = cv2.waitKey(1)
 
-            # Press Q to quit
-            if key == ord('q'):
+            if key == ord("q"):
                 break
 
-            # Press P to capture photo
-            if key == ord('p'):
+            if key == ord("p"):
                 self.capture(frame)
 
         self.stop()
@@ -65,7 +114,7 @@ class Camera:
 
         if frame is None:
 
-            ret, frame = self.camera.read()
+            ret, frame = self.read_frame()
 
             if not ret:
                 raise Exception("Cannot capture image")
@@ -85,8 +134,15 @@ class Camera:
 
     def stop(self):
 
-        if self.camera is not None:
-            self.camera.release()
+        if IS_RASPBERRY_PI:
+
+            if self.picam2 is not None:
+                self.picam2.stop()
+
+        else:
+
+            if self.camera is not None:
+                self.camera.release()
 
         cv2.destroyAllWindows()
 
